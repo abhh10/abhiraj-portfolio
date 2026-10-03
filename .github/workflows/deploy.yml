@@ -30,6 +30,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Check build output
+        run: |
+          echo "=== DIST CONTENTS ==="
+          find dist -maxdepth 2 -type f -print
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
