@@ -62,9 +62,8 @@ export default function AboutSection() {
 
           {/* Download resume button */}
           <a
-            href="./Abhiraj_Karpe_Resume.pdf"
-            target="_blank"
-            rel="noreferrer"
+            href="/abhiraj-portfolio/Abhiraj_Karpe_Resume.pdf"
+            download
             className="btn-secondary"
             style={{ display: 'inline-flex' }}
           >
