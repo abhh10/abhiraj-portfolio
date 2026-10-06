@@ -375,7 +375,7 @@ export default function Hero() {
               VIEW PROJECTS ↗
             </a>
             <a
-              href="/Abhiraj_Karpe_Resume.pdf"
+              href={`${import.meta.env.BASE_URL}Abhiraj_Karpe_Resume.pdf`}
               target="_blank"
               rel="noreferrer"
               className="btn-secondary"
