@@ -1,104 +1,18 @@
-import SectionHeader from './SectionHeader'
-import TerminalWindow from './TerminalWindow'
+import { PROFILE } from '../data'
+import { ArrowUpRight } from './Icons'
 
 export default function AboutSection() {
   return (
-    <section
-      id="about"
-      style={{
-        borderBottom: '1px solid #2a2a2a',
-      }}
-    >
-      <SectionHeader num="03" title="About" rightLabel="A bit more context." />
-
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '0',
-        }}
-        className="about-grid"
-      >
-        {/* Left: bio */}
-        <div
-          style={{
-            padding: '32px 28px',
-            borderRight: '1px solid #2a2a2a',
-          }}
-          className="about-left"
-        >
-          <p
-            style={{
-              fontSize: '0.78rem',
-              color: '#888880',
-              lineHeight: '1.8',
-              marginBottom: '20px',
-              maxWidth: '440px',
-            }}
-          >
-            I&apos;m a Computer Science graduate who enjoys
-            <br />
-            working with data, building pipelines and
-            <br />
-            understanding how systems work end to end.
-          </p>
-          <p
-            style={{
-              fontSize: '0.78rem',
-              color: '#666660',
-              lineHeight: '1.8',
-              marginBottom: '36px',
-              maxWidth: '440px',
-            }}
-          >
-            Mostly focused on data engineering — from
-            <br />
-            ingestion and transformation to analytics-ready
-            <br />
-            data. I also like exploring web development,
-            <br />
-            machine learning and the occasional random project.
-          </p>
-
-          {/* Download resume button */}
-          <a
-            href={`${import.meta.env.BASE_URL}Abhiraj_Karpe_Resume.pdf`}
-            download
-            className="btn-secondary"
-            style={{ display: 'inline-flex' }}
-          >
-            DOWNLOAD RESUME ↗
-          </a>
-        </div>
-
-        {/* Right: terminal */}
-        <div
-          style={{
-            padding: '32px 28px',
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-          className="about-right"
-        >
-          <TerminalWindow />
-        </div>
-      </div>
-
-      <style>{`
-        @media (max-width: 680px) {
-          .about-grid {
-            grid-template-columns: 1fr !important;
-          }
-          .about-left {
-            border-right: none !important;
-            border-bottom: 1px solid #2a2a2a !important;
-            padding: 24px 20px !important;
-          }
-          .about-right {
-            padding: 24px 20px !important;
-          }
-        }
-      `}</style>
+    <section id="about" className="mx-auto max-w-[1040px] px-6 pb-24">
+      <h2 className="section-title mb-6"><span className="text-dim">&gt;</span> About</h2>
+      <p className="max-w-[640px] text-[14px] leading-[1.8] text-dim">
+        B.Tech Computer Science graduate (Software Engineering) from Ajeenkya D.Y. Patil University, Pune, CGPA 8.86.
+        I focus on LLM-based systems: retrieval, tool use, guardrails and evaluation, backed by data engineering
+        experience with Kafka, Spark and Iceberg. Outside of work I solve algorithm problems (700+ on LeetCode).
+      </p>
+      <a href={PROFILE.resume} download className="btn mt-6">
+        Resume (PDF) <ArrowUpRight />
+      </a>
     </section>
   )
 }

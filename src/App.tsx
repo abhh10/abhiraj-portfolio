@@ -1,19 +1,21 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import ExperienceSection from './components/ExperienceSection'
 import ProjectsSection from './components/ProjectsSection'
+import SkillsSection from './components/SkillsSection'
 import AboutSection from './components/AboutSection'
-import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen" style={{ background: '#0a0a0a' }}>
+    <div className="min-h-screen bg-bg">
       <Navbar />
       <main>
         <Hero />
+        <ExperienceSection />
         <ProjectsSection />
+        <SkillsSection />
         <AboutSection />
-        <ContactSection />
       </main>
       <Footer />
     </div>
