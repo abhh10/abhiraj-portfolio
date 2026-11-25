@@ -16,6 +16,7 @@ export default function Hero() {
         aria-hidden="true"
         width={1800}
         height={600}
+        style={{ marginTop: '-3.2%' }} // trims ~half of the empty sky above the bridge
         className="pointer-events-none mx-auto w-full select-none opacity-90 mix-blend-lighten [mask-image:linear-gradient(to_bottom,black_65%,transparent),linear-gradient(to_right,transparent,black_12%,black_88%,transparent)] [mask-composite:intersect] [-webkit-mask-composite:source-in]"
       />
       <div className="fade-in relative -mt-6 sm:-mt-14 sm:pl-10">
