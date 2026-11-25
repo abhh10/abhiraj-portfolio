@@ -1,6 +1,5 @@
 import { PROFILE } from '../data'
 import { GithubIcon, LinkedinIcon, MailIcon } from './Icons'
-import Mountain from './Mountain'
 
 const socials = [
   { label: 'GitHub', href: PROFILE.github, icon: <GithubIcon /> },
@@ -10,9 +9,16 @@ const socials = [
 
 export default function Hero() {
   return (
-    <section id="home" className="relative mx-auto max-w-[1040px] px-6 pb-16 pt-24 sm:pt-32">
-      <Mountain />
-      <div className="fade-in relative sm:pl-10">
+    <section id="home" className="relative mx-auto max-w-[1040px] px-6 pb-16 pt-4">
+      <img
+        src={`${import.meta.env.BASE_URL}hero-bridge.jpg`}
+        alt=""
+        aria-hidden="true"
+        width={1800}
+        height={600}
+        className="pointer-events-none mx-auto w-full select-none opacity-90 mix-blend-lighten [mask-image:linear-gradient(to_bottom,black_65%,transparent),linear-gradient(to_right,transparent,black_12%,black_88%,transparent)] [mask-composite:intersect] [-webkit-mask-composite:source-in]"
+      />
+      <div className="fade-in relative -mt-6 sm:-mt-14 sm:pl-10">
         <div className="flex items-end gap-6">
           <div className="h-[95px] w-[96px] shrink-0 overflow-hidden rounded-xl border border-line sm:h-[126px] sm:w-[126px]">
             <div className="h-[126px] w-full overflow-hidden sm:h-[168px]">
